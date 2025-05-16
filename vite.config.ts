@@ -21,8 +21,9 @@ export default defineConfig({
     },
   },
   root: path.resolve(__dirname, "client"),
+  base: "./", // Ensure relative asset paths for Vercel
   build: {
-    outDir: path.resolve(__dirname, "dist/public"),
+    outDir: path.resolve(__dirname, "dist"), // Vercel expects output here
     emptyOutDir: true,
   },
   // Add support for large models and audio files
